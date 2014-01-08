@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KeyMapping" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/macro1Mapping"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:text="MKey1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/macro2Mapping"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/macro2Mapping"
+        android:text="MKey2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Macro Key Mappings"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/macro1Mapping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/macro2Mapping"
+        android:layout_marginTop="38dp"
+        android:layout_toRightOf="@+id/saveMapping"
+        android:entries="@array/pref_example_list_values" />
+
+    <Spinner
+        android:id="@+id/macro2Mapping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="46dp"
+        android:layout_toRightOf="@+id/saveMapping" />
+
+    <Button
+        android:id="@+id/saveMapping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="24dp"
+        android:text="Save Mapping" />
+
+    <EditText
+        android:id="@+id/mappingName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/saveMapping"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/saveMapping"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/loadMapping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/saveMapping"
+        android:layout_marginTop="69dp"
+        android:text="Load Mapping" />
+
+    <Spinner
+        android:id="@+id/availableMappings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/macro1Mapping"
+        android:layout_alignTop="@+id/loadMapping"
+        android:layout_toLeftOf="@+id/deleteMapping" />
+
+    <Button
+        android:id="@+id/deleteMapping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/availableMappings"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/textView4"
+        android:text="Delete Mapping" />
+
+</RelativeLayout>

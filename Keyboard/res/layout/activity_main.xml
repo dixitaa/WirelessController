@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    tools:context=".MainActivity" >
+
+    <ImageButton
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/down"
+        android:src="@drawable/right_big" />
+
+    <ImageButton
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/right"
+        android:layout_marginRight="93dp"
+        android:layout_toLeftOf="@+id/right"
+        android:src="@drawable/left_big" />
+
+    <ImageButton
+        android:id="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/down"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="91dp"
+        android:layout_marginLeft="63dp"
+        android:src="@drawable/up_big" />
+
+    <ImageButton
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/up"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="134dp"
+        android:src="@drawable/down_big" />
+
+    <ImageButton
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/left"
+        android:layout_alignTop="@+id/up"
+        android:src="@drawable/load_big" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Macro1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="21dp"
+        android:text="Activity Window"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Macro1"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_toLeftOf="@+id/load" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/DisplayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/Macro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/scrollView1"
+        android:layout_below="@+id/scrollView1"
+        android:layout_marginRight="36dp"
+        android:src="@drawable/tux" />
+
+    <ImageButton
+        android:id="@+id/Macro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/up"
+        android:layout_marginLeft="51dp"
+        android:layout_toRightOf="@+id/down"
+        android:src="@drawable/tux" />
+
+</RelativeLayout>
